@@ -1,0 +1,1236 @@
+/* Set root font-size @10px equivalent */
+html {
+  font-size: .625em;
+  /* fallback IE8+ */
+  font-size: calc(1em * .625);
+  /* IE9-IE11 math fixing. See http://bit.ly/1g4X0bX */
+  scroll-behavior: smooth;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove focus for mouse users */
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  font-size: 1.6rem;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  color: #000;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove default padding */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make medias easier to work with */
+img,
+video,
+audio {
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Set cursor pointer */
+label[for],
+button,
+input[type="submit"],
+select {
+  cursor: pointer;
+}
+
+/* Remove font style on address */
+address {
+  font-style: normal;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  width: 1px;
+  position: absolute;
+  white-space: nowrap;
+}
+
+/* Image replacement technique 2012 H5BP  - https://css-tricks.com/the-image-replacement-museum/ */
+.ir {
+  font: 0/0 a;
+  color: transparent;
+  border: 0;
+  text-shadow: none;
+}
+
+/* Phone links active only under 36em (576px) */
+a[href^="tel"] {
+  white-space: nowrap;
+  pointer-events: none;
+  text-decoration: none;
+  color: inherit;
+}
+
+@media (max-width: 36em) {
+  a[href^="tel"] {
+    pointer-events: auto;
+    text-decoration: underline;
+  }
+}
+
+/* Print external URLs */
+@media print {
+  a {
+    text-decoration: underline;
+  }
+  a[href]:not([href^='#'])::after {
+    content: "(" attr(href) ")";
+  }
+}
+
+/* montserrat-regular - latin */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src: local(""), url("../fonts/montserrat-v15-latin-regular.woff2") format("woff2"), url("../fonts/montserrat-v15-latin-regular.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* montserrat-500 - latin */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  src: local(""), url("../fonts/montserrat-v15-latin-500.woff2") format("woff2"), url("../fonts/montserrat-v15-latin-500.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* montserrat-italic - latin */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: italic;
+  font-weight: 400;
+  src: local(""), url("../fonts/montserrat-v15-latin-italic.woff2") format("woff2"), url("../fonts/montserrat-v15-latin-italic.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* montserrat-600 - latin */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  src: local(""), url("../fonts/montserrat-v15-latin-600.woff2") format("woff2"), url("../fonts/montserrat-v15-latin-600.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* raleway-600 - latin */
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 600;
+  src: local(""), url("../fonts/raleway-v19-latin-600.woff2") format("woff2"), url("../fonts/raleway-v19-latin-600.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* raleway-700 - latin */
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 700;
+  src: local(""), url("../fonts/raleway-v19-latin-700.woff2") format("woff2"), url("../fonts/raleway-v19-latin-700.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+@font-face {
+  font-family: 'fontello';
+  src: url("../fonts/fontello-burger/fontello.eot?93509442");
+  src: url("../fonts/fontello-burger/fontello.eot?93509442#iefix") format("embedded-opentype"), url("../fonts/fontello-burger/fontello.woff2?93509442") format("woff2"), url("../fonts/fontello-burger/fontello.woff?93509442") format("woff"), url("../fonts/fontello-burger/fontello.ttf?93509442") format("truetype"), url("../fonts/fontello-burger/fontello.svg?93509442#fontello") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'fontello';
+  src: url("../fonts/fontello-close/fontello.eot?81940783");
+  src: url("../fonts/fontello-close/fontello.eot?81940783#iefix") format("embedded-opentype"), url("../fonts/fontello-close/fontello.woff2?81940783") format("woff2"), url("../fonts/fontello-close/fontello.woff?81940783") format("woff"), url("../fonts/fontello-close/fontello.ttf?81940783") format("truetype"), url("../fonts/fontello-close/fontello.svg?81940783#fontello") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+  @media screen and (-webkit-min-device-pixel-ratio:0) {
+    @font-face {
+      font-family: 'fontello';
+      src: url('../font/fontello.svg?93509442#fontello') format('svg');
+    }
+  }
+  */
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+  /* you can be more comfortable with increased icons size */
+  font-size: 120%;
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+
+.icon-menu:before {
+  content: '\f0c9';
+}
+
+.icon-cancel:before {
+  content: '\e800';
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: #FFFFFF;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  line-height: 1.5;
+  color: #331100;
+}
+
+body main {
+  height: 100%;
+  flex: 1;
+}
+
+.section-title {
+  font-family: 'Raleway', sans-serif;
+  font-size: 4.2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+@media screen and (min-width: 36em) {
+  .section-title {
+    font-size: 4.8rem;
+  }
+}
+
+.main-text-semi {
+  max-width: 84rem;
+  font-family: 'Raleway', sans-serif;
+  font-size: 2.4rem;
+  font-weight: 600;
+  margin-bottom: 4rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.main-text-reg {
+  max-width: 84rem;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+}
+
+.hero-cta {
+  padding: 2rem 3rem;
+  font-weight: 600;
+  font-size: 2.4rem;
+  text-decoration: none;
+  text-align: center;
+  color: #FFFFFF;
+  background-color: #FD7E37;
+  border: 1px solid #707070;
+  margin-bottom: 3rem;
+  transition: .3s ease-in;
+}
+
+.hero-cta:hover, .hero-cta:focus {
+  color: #FD7E37;
+  background-color: #FFFFFF;
+}
+
+@media screen and (min-width: 36em) {
+  .hero-cta {
+    font-size: 4rem;
+  }
+}
+
+@media screen and (min-width: 62em) {
+  .hero-cta {
+    align-self: flex-end;
+  }
+}
+
+.card-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+  padding-top: 1rem;
+  padding-bottom: .9rem;
+  border-radius: 0 0 .4rem .4rem;
+  font-size: 2.4rem;
+  font-weight: 600;
+  background-color: #FD7E37;
+  color: #FFFFFF;
+  text-decoration: none;
+  transition: .3s ease-in;
+}
+
+.card-link::before {
+  content: ' ';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 2;
+}
+
+.card-link:hover, .card-link:focus {
+  background-color: #FFFFFF;
+  color: #FD7E37;
+}
+
+.card-link:hover .arrow-logo,
+.card-link:focus .arrow-logo {
+  stroke: #FD7E37;
+}
+
+.card-link .arrow-logo {
+  height: 2.2rem;
+  width: 2.2rem;
+  margin-left: 1.6rem;
+  stroke: #FFFFFF;
+  transition: .3s ease-in;
+}
+
+.pagination-list {
+  display: flex;
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pagination-list .pagination-item:not(:last-child) {
+  margin-right: 1rem;
+}
+
+@media screen and (min-width: 36em) {
+  .pagination-list .pagination-item:not(:last-child) {
+    margin-right: 2rem;
+  }
+}
+
+.pagination-list .pagination-btn {
+  min-height: 3rem;
+  min-width: 3rem;
+  color: #FD7E37;
+  text-align: center;
+  border-radius: 5px;
+  border: 1px solid #FD7E37;
+  background-color: #FFFFFF;
+}
+
+.pagination-list .pagination-btn.active, .pagination-list .pagination-btn:hover, .pagination-list .pagination-btn:focus {
+  background-color: #FD7E37;
+  color: #FFFFFF;
+}
+
+.date {
+  display: flex;
+  align-items: center;
+  font-size: 1.6rem;
+  color: #663014;
+  margin-bottom: 1.6rem;
+}
+
+.date .date-logo {
+  height: 1.5rem;
+  width: 1.6rem;
+  margin-right: .8rem;
+  stroke: #FFFFFF;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  max-width: 40.4rem;
+  box-shadow: 0px 0px 48px #00000029;
+  border-radius: .4rem;
+}
+
+.card .card-img {
+  width: 100%;
+  height: 26rem;
+  object-fit: cover;
+  object-position: center;
+  border-radius: .4rem .4rem 0 0;
+}
+
+.card .card-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding-left: 1.4rem;
+  padding-right: 1.6rem;
+  padding-top: 2.4rem;
+}
+
+.card .card-content .card-title {
+  font-family: 'Raleway', sans-serif;
+  font-size: 2.4rem;
+  font-weight: 600;
+  margin-bottom: 1.6rem;
+}
+
+.card .card-content .card-text {
+  margin-top: auto;
+  margin-bottom: 2.4rem;
+}
+
+.student-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.student-item .student-avatar {
+  height: 21.8rem;
+  width: 21.8rem;
+  object-fit: cover;
+  object-position: center;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+}
+
+.student-item .student-title {
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: #FFFFFF;
+  margin-bottom: 2rem;
+}
+
+.student-item .student-link {
+  font-size: 1.6rem;
+  color: #FFFFFF;
+  transition: .3s ease-in;
+  margin-top: auto;
+}
+
+.student-item .student-link::before {
+  content: ' ';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 2;
+}
+
+.student-item .student-link:hover, .student-item .student-link:focus {
+  background-color: #FFFFFF;
+  color: #FD7E37;
+  border-radius: .4rem;
+  text-shadow: .4rem .4rem .8rem #00000080;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  /* from 792px */
+  /* from 992px */
+  /* from 1200px */
+  /* from 1400px */
+}
+
+@media screen and (min-width: 49.5em) {
+  .container {
+    max-width: 84.6rem;
+  }
+}
+
+@media screen and (min-width: 62em) {
+  .container {
+    max-width: 99.6rem;
+  }
+}
+
+@media screen and (min-width: 75em) {
+  .container {
+    max-width: 114.6rem;
+  }
+}
+
+@media screen and (min-width: 87.5em) {
+  .container {
+    max-width: 129.6rem;
+  }
+}
+
+.main-header {
+  position: sticky;
+  z-index: 100;
+  width: 100%;
+  background-color: #FD7E37;
+  color: #FFFFFF;
+  padding: 2.2rem 0;
+  top: 0;
+  left: 0;
+}
+
+.main-header .container {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.main-header .brand-logo {
+  font-family: 'Raleway', sans-serif;
+  font-size: 4.2rem;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+@media screen and (min-width: 36em) {
+  .main-header .brand-logo {
+    font-size: 4.8rem;
+  }
+}
+
+@media screen and (min-width: 49.5em) {
+  .main-header .brand-logo {
+    margin: 0 auto;
+  }
+}
+
+[hidden] {
+  display: block;
+  visibility: hidden;
+}
+
+.toggle-menu {
+  border: none;
+  background-color: transparent;
+  padding: 1.5rem;
+  color: var(--font-color-main);
+}
+
+@media screen and (min-width: 49.5em) {
+  .toggle-menu {
+    display: none;
+  }
+}
+
+.menu {
+  position: absolute;
+  z-index: 10;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: #FD7E37;
+  text-align: center;
+  transform: translateX(-100%);
+  transition: .5s;
+}
+
+.menu:not([hidden]) {
+  transform: translateX(0);
+}
+
+@media screen and (min-width: 49.5em) {
+  .menu {
+    display: flex;
+    align-items: center;
+    position: static;
+    visibility: visible;
+    transform: translateX(0);
+  }
+}
+
+.menu .menu-link {
+  display: block;
+  font-weight: 600;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  transition: .3s ease-in;
+}
+
+.menu .menu-link.active, .menu .menu-link:hover, .menu .menu-link:focus {
+  color: #FD7E37;
+  background-color: #FFFFFF;
+}
+
+.contact {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  column-gap: 3.2rem;
+  text-align: left;
+}
+
+@media screen and (min-width: 36em) {
+  .contact {
+    padding: 0 10.9rem;
+  }
+}
+
+@media screen and (min-width: 62em) {
+  .contact {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.contact .fullwidth {
+  grid-column: 1 / -1;
+}
+
+.contact label {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.contact input {
+  width: 100%;
+  margin: 0;
+  border: 0;
+  border-bottom: 1px solid #707070;
+  padding: .4rem 0;
+  border-radius: .2rem;
+  margin-bottom: 4.4rem;
+}
+
+.contact input::placeholder {
+  font-style: italic;
+}
+
+.contact textarea {
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid #707070;
+  border-radius: .2rem;
+  padding: .4rem 0;
+  height: 20rem;
+  resize: none;
+  margin-bottom: 2rem;
+}
+
+.contact textarea::placeholder {
+  font-style: italic;
+}
+
+.contact button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 1rem;
+  padding-bottom: .9rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  border-radius: .4rem;
+  border: none;
+  font-size: 2.4rem;
+  font-weight: 600;
+  background-color: #FD7E37;
+  color: #FFFFFF;
+  transition: .3s ease-in;
+}
+
+.contact button:hover, .contact button:focus {
+  background-color: #FFFFFF;
+  color: #FD7E37;
+}
+
+.contact button:hover .arrow-logo,
+.contact button:focus .arrow-logo {
+  stroke: #FD7E37;
+}
+
+@media screen and (min-width: 62em) {
+  .contact button {
+    justify-self: end;
+    grid-column: 2;
+  }
+}
+
+.contact button .arrow-logo {
+  height: 2.2rem;
+  width: 2.2rem;
+  margin-left: 1.6rem;
+  stroke: #FFFFFF;
+  transition: .3s ease-in;
+}
+
+.main-footer {
+  padding-top: 4rem;
+  padding-bottom: 3.6rem;
+  background-color: #FD7E37;
+  color: #FFFFFF;
+  border: 1px solid #707070;
+}
+
+.main-footer .container {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+@media screen and (min-width: 49.5em) {
+  .main-footer .container {
+    justify-content: space-between;
+    flex-flow: row wrap;
+    align-items: center;
+  }
+}
+
+.main-footer a {
+  transition: all .3s ease-in;
+  outline: none;
+}
+
+.main-footer a:hover, .main-footer a:focus,
+.main-footer a:hover svg,
+.main-footer a:focus svg {
+  transform: scale(1.5);
+  text-shadow: .6rem .6rem 1rem #00000080;
+  fill: #331100;
+}
+
+.main-footer .footer-adress {
+  font-weight: 500;
+  line-height: 3.6rem;
+  margin-bottom: 2rem;
+}
+
+.main-footer .footer-adress .footer-title {
+  font-weight: 600;
+}
+
+.main-footer .mention-list {
+  display: flex;
+  flex-flow: column wrap;
+  margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 49.5em) {
+  .main-footer .mention-list {
+    flex-flow: row wrap;
+  }
+}
+
+.main-footer .mention-list .mention-item:not(:last-child) {
+  margin-right: 2rem;
+}
+
+.main-footer .mention-list .mention-link {
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 3.6rem;
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+.main-footer .social-list {
+  min-width: 21.8rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+@media screen and (min-width: 49.5em) {
+  .main-footer .social-list {
+    justify-content: space-between;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 62em) {
+  .main-footer .social-list {
+    margin: 0;
+  }
+}
+
+.main-footer .social-list svg {
+  transition: all .3s ease-in;
+}
+
+/*SECTION HERO*/
+.hero {
+  background-image: url(../img/bg-image-hero.jpg);
+  background-size: cover;
+  background-position: center;
+  min-height: 74vh;
+}
+
+@media (min-resolution: 144dpi) {
+  .hero {
+    background-image: url(../img/bg-image-hero@2x.jpg);
+  }
+}
+
+.hero .container {
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (min-width: 62em) {
+  .hero .container {
+    justify-content: flex-end;
+  }
+}
+
+.hero .bloc-title {
+  display: flex;
+  flex-direction: column;
+  max-width: 100.8rem;
+  padding-left: 1.2rem;
+  padding-right: 1.4rem;
+  background-color: #00000080;
+}
+
+@media screen and (min-width: 36em) {
+  .hero .bloc-title {
+    margin-top: 6rem;
+    padding-left: 2.4rem;
+    padding-right: 2.8rem;
+  }
+}
+
+@media screen and (min-width: 87.5em) {
+  .hero .bloc-title {
+    margin-top: 24rem;
+  }
+}
+
+.hero .bloc-title .hero-title {
+  font-family: 'Raleway', sans-serif;
+  font-size: 4rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  text-shadow: .2rem .2rem .6rem #00000080;
+  margin-bottom: 3rem;
+}
+
+@media screen and (min-width: 36em) {
+  .hero .bloc-title .hero-title {
+    font-size: 7.2rem;
+  }
+}
+
+/*SECTION NEWS*/
+.news {
+  background-color: #FFFFFF;
+  padding: 4rem 0;
+}
+
+.news .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.news .container-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  column-gap: 3.2rem;
+  row-gap: 4rem;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 62em) {
+  .news .container-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/*SECTION STUDENTS*/
+.students {
+  background-color: #FD7E37;
+  border: 1px solid #707070;
+  padding: 4rem 0;
+}
+
+.students .section-title {
+  color: #FFFFFF;
+}
+
+.students .students-list {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  justify-items: center;
+  column-gap: 3.2rem;
+  row-gap: 4rem;
+}
+
+@media screen and (min-width: 49.5em) {
+  .students .students-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 62em) {
+  .students .students-list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/*SECTION COURSES*/
+.courses {
+  background-color: #FFFFFF;
+  padding: 4rem 0;
+}
+
+.courses .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.courses .container-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  column-gap: 3.2rem;
+  row-gap: 4rem;
+}
+
+@media screen and (min-width: 62em) {
+  .courses .container-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.courses .card {
+  max-width: 62.2rem;
+}
+
+.courses .card .card-content {
+  padding-top: 4rem;
+}
+
+.courses .card .card-text {
+  margin-bottom: 4rem;
+}
+
+.page-courses {
+  background-color: #FFFFFF;
+  padding: 4rem 0;
+}
+
+.page-courses .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-courses .container-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  column-gap: 3.2rem;
+  row-gap: 4rem;
+  margin-bottom: 8rem;
+}
+
+@media screen and (min-width: 62em) {
+  .page-courses .container-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.page-courses .card {
+  max-width: 62.2rem;
+}
+
+.page-courses .card .card-content {
+  padding-top: 4rem;
+}
+
+.page-courses .card .card-content .card-text {
+  margin-bottom: 4rem;
+}
+
+.page-courses-details {
+  background-color: #FFFFFF;
+}
+
+.page-courses-details .courses-details-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-image: url(../img/courses-card-img-1@2x.jpg);
+  background-size: cover;
+  background-position: center;
+  border: 1px solid #707070;
+  min-height: 40rem;
+}
+
+.page-courses-details .courses-details-header .section-title {
+  color: #FFFFFF;
+}
+
+.page-courses-details .container {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  max-width: 84rem;
+}
+
+.page-courses-details .main-text-semi {
+  margin-bottom: 2rem;
+}
+
+.page-students {
+  background-color: #FFFFFF;
+  padding: 4rem 0;
+}
+
+.page-students .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.page-students .students-list {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  justify-items: center;
+  column-gap: 3.2rem;
+  row-gap: 2.3rem;
+  margin-bottom: 4rem;
+}
+
+@media screen and (min-width: 49.5em) {
+  .page-students .students-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 62em) {
+  .page-students .students-list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.page-students .students-list .student-title {
+  color: #331100;
+}
+
+.page-students .students-list .student-link {
+  color: #FD7E37;
+}
+
+.page-students .students-list .student-link:hover, .page-students .students-list .student-link:focus {
+  background-color: #FD7E37;
+  color: #FFFFFF;
+  border-radius: .4rem;
+  text-shadow: .4rem .4rem .8rem #00000080;
+}
+
+.page-students .pagination-list {
+  display: flex;
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5rem;
+}
+
+.page-student {
+  background-color: #FFFFFF;
+  padding: 4rem 0;
+}
+
+.page-student .student-avatar-large {
+  max-height: 40.4rem;
+  object-fit: cover;
+  object-position: center;
+  margin: 0 auto;
+  margin-bottom: 4rem;
+}
+
+.page-student .about-list {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  column-gap: 3.6rem;
+  row-gap: 4rem;
+}
+
+@media screen and (min-width: 36em) {
+  .page-student .about-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 62em) {
+  .page-student .about-list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.page-student .about-list .about-title {
+  font-family: 'Raleway', sans-serif;
+  font-size: 2.4rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+.page-student .about-list .about-item:last-child {
+  grid-column: 1 / -1;
+  font-size: 2.4rem;
+}
+
+.page-news {
+  background-color: #FFFFFF;
+  padding: 4rem 0;
+}
+
+.page-news .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-news .container-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  column-gap: 3.2rem;
+  row-gap: 4rem;
+  margin-bottom: 4rem;
+}
+
+@media screen and (min-width: 49.5em) {
+  .page-news .container-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 62em) {
+  .page-news .container-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.page-news-details {
+  background-color: #FFFFFF;
+  padding: 4rem 0;
+}
+
+.page-news-details .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 84rem;
+}
+
+.page-news-details .news-details-photo {
+  height: 54.1rem;
+  width: 84rem;
+  border-radius: .4rem .4rem 0 0;
+  object-fit: cover;
+  object-position: center;
+  margin: 0 auto;
+  margin-bottom: 4rem;
+}
+
+.page-news-details .date {
+  margin-bottom: 4rem;
+}
+
+.page-contact {
+  background-color: #FFFFFF;
+  padding: 4rem 0;
+}
+
+.page-contact .section-title {
+  margin-bottom: 14.1rem;
+}
+
+.page-politic {
+  background-color: #FFFFFF;
+  padding: 4rem 0;
+}

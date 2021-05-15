@@ -1,0 +1,71 @@
+.main-footer {
+    padding-top: 4rem;
+    padding-bottom: 3.6rem;
+    background-color: $color-orange;
+    color: $color-white;
+    border: 1px solid $color-border-section;
+    .container {
+        display: flex;
+        flex-flow: column wrap;
+        @media screen and (min-width: 49.5em) {
+            justify-content: space-between;
+            flex-flow: row wrap;
+            align-items: center;
+        }
+    }
+    a {
+        transition: all .3s ease-in;
+        outline: none;
+        &:hover,
+        &:focus,
+        &:hover svg,
+        &:focus svg {
+            transform: scale(1.5);
+            text-shadow: .6rem .6rem 1rem #00000080;
+            fill: $color-dark;
+        }
+    }
+    .footer-adress {
+       font-weight: 500; 
+       line-height: 3.6rem;
+       margin-bottom: 2rem;
+       .footer-title {
+           font-weight: 600;
+       }
+    }
+    .mention-list {
+        display: flex;
+        flex-flow: column wrap;
+        margin-bottom: 2rem;
+        @media screen and (min-width: 49.5em) {
+            flex-flow: row wrap;
+        }
+        .mention-item:not(:last-child) {
+            margin-right: 2rem;
+        }
+        .mention-link {
+            font-size: 1.6rem;
+            font-weight: 500;
+            line-height: 3.6rem;
+            text-decoration: none;
+            color: $color-white;
+        }
+    }
+    .social-list {
+        min-width: 21.8rem;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        @media screen and (min-width: 49.5em) {
+            justify-content: space-between;
+            margin: 0 auto;
+        }
+        @media screen and (min-width: 62em) {
+            margin: 0;
+        }
+        svg {
+            transition: all .3s ease-in;
+        }
+        
+    }
+}

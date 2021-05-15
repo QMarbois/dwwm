@@ -1,0 +1,44 @@
+.page-students {
+    background-color: $color-white;
+    padding: 4rem 0;
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .students-list {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        justify-items: center;
+        column-gap: 3.2rem;
+        row-gap: 2.3rem;
+        margin-bottom: 4rem;
+        @media screen and (min-width: 49.5em) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @media screen and (min-width: 62em) {
+            grid-template-columns: repeat(4, 1fr);
+        }
+        .student-title{
+            color: $color-dark;
+        }
+        .student-link {
+            color: $color-orange;
+            &:hover,
+            &:focus {
+                background-color: $color-orange;
+                color: $color-white;
+                border-radius: .4rem;
+                text-shadow: .4rem .4rem .8rem #00000080;
+            }
+        }
+    }
+    .pagination-list{
+        display: flex;
+        font-size: 1.6rem;
+        font-weight: 500;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 5rem;
+    }
+}

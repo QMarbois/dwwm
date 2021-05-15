@@ -1,0 +1,40 @@
+body {
+    display: flex;
+    flex-direction: column;
+	background-color: $color-white;
+    font-family: 'Montserrat', sans-serif;
+	font-size: 2rem;
+	line-height: 1.5;
+	color: $color-dark;
+    main{
+        height: 100%;
+        flex: 1;
+    }
+}
+
+.section-title{
+    font-family: 'Raleway', sans-serif;
+    font-size: 4.2rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 4rem;
+    @media screen and (min-width: 36em) {
+        font-size: 4.8rem;
+    }
+}
+
+.main-text-semi {
+    max-width: 84rem;
+    font-family: 'Raleway', sans-serif;
+    font-size: 2.4rem;
+    font-weight: 600;
+    margin-bottom: 4rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main-text-reg {
+    max-width: 84rem;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+}

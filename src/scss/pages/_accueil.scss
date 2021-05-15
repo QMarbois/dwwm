@@ -1,0 +1,118 @@
+/*SECTION HERO*/
+.hero {
+    background-image: url(../img/bg-image-hero.jpg);
+    background-size: cover;
+	background-position: center;
+    min-height: 74vh;
+    @media (min-resolution: 144dpi) {
+        background-image: url(../img/bg-image-hero@2x.jpg);
+
+    }
+    .container {
+        display: flex;
+        justify-content: center;
+        @media screen and (min-width: 62em) {
+            justify-content: flex-end;
+        }
+    }
+    .bloc-title {
+        display: flex;
+        flex-direction: column;
+        max-width: 100.8rem;
+        padding-left: 1.2rem;
+        padding-right: 1.4rem;
+        background-color: $color-overlay-hero;
+        @media screen and (min-width: 36em) {
+            margin-top: 6rem;
+            padding-left: 2.4rem;
+            padding-right: 2.8rem;
+        }
+        @media screen and (min-width: 87.5em) {
+            margin-top: 24rem;
+        }
+        .hero-title {
+            font-family: 'Raleway', sans-serif;
+            font-size: 4rem;
+            font-weight: 700;
+            color: $color-white;
+            text-shadow: .2rem .2rem .6rem #00000080;
+            margin-bottom: 3rem;
+            @media screen and (min-width: 36em) {
+                font-size: 7.2rem;
+            }
+        }
+    }
+}
+
+/*SECTION NEWS*/
+.news{
+    background-color: $color-white;
+    padding: 4rem 0;
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .container-grid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        column-gap: 3.2rem;
+        row-gap: 4rem;
+        margin: 0 auto;
+        @media screen and (min-width: 62em) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+}
+
+/*SECTION STUDENTS*/
+.students {
+    background-color: $color-orange;
+    border: 1px solid $color-border-section;
+    padding: 4rem 0;
+    .section-title{
+        color: $color-white;
+    }
+    .students-list {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        justify-items: center;
+        column-gap: 3.2rem;
+        row-gap: 4rem;
+        @media screen and (min-width: 49.5em) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @media screen and (min-width: 62em) {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+}
+
+/*SECTION COURSES*/
+.courses{
+    background-color: $color-white;
+    padding: 4rem 0;
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .container-grid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        column-gap: 3.2rem;
+        row-gap: 4rem;
+        @media screen and (min-width: 62em) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+    .card{
+        max-width: 62.2rem;
+        .card-content {
+            padding-top: 4rem;
+        }
+        .card-text {
+            margin-bottom: 4rem;
+        }
+    }
+}
